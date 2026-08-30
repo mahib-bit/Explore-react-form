@@ -4,15 +4,24 @@ import { useState } from 'react';
 const ControlledField = () => {
 
     const [password, setPassword] =useState('');
+    const [error, setError] = useState('');
 
     const handleControlledField = (e) => {
         e.preventDefault();
-        console.log(e.target.email.value);
-        console.log(e.target.password.value);
+        // console.log(e.target.email.value);
+        // console.log(e.target.password.value);
     }
 
     const handlePasswordChange = (e) => {
         console.log(e.target.value);
+        setPassword(e.target.value);
+
+        if(password.length < 6){
+            setError('Password must be at least 6 characters long');
+        }
+        else{
+            setError('');
+        }
     }
     
     return (
@@ -24,6 +33,11 @@ const ControlledField = () => {
                 <br />
                 <input type="submit" value="Submit" />
             </form>
+            <p style={{ color: 'red' }}>
+                <small>
+                    {error}
+                </small>
+            </p>
         </div>
     );
 };
