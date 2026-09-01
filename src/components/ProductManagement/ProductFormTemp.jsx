@@ -4,7 +4,19 @@ const ProductFormTemp = () => {
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(e.target.value);
+        // console.log(e.target.value);
+        const Name = e.target.productName.value;
+        const Price = e.target.productPrice.value;
+        const Quantity = e.target.productQuantity.value;
+
+        // console.log(Name,Price,Quantity);
+        const newProduct = {
+            Name,
+            Price,
+            Quantity
+        }
+
+        console.log(newProduct);
     };
 
     return (
