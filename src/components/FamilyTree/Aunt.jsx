@@ -7,8 +7,8 @@ const Aunt = () => {
         <div>
             <h3>Aunt</h3>
             <section className='flex'>
-                <Cousin name='Jhon'></Cousin>
-                <Cousin name='Albert'></Cousin>
+                <Cousin name='Mizar'></Cousin>
+                <Cousin name='Alcor'></Cousin>
             </section>
         </div>
     );

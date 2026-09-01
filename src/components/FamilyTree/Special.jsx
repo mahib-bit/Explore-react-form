@@ -4,7 +4,8 @@ import { AssetContext } from './FamilyTree';
 const Special = ({name,asset}) => {
 
     const newAsset = useContext(AssetContext);
-    console.log(newAsset)
+    // console.log(newAsset)
+    
     return (
         <div>
             <h3>Special :{name}</h3>
